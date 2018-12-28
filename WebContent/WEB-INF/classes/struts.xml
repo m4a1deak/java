@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC   
+     "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"   
+     "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+
+<struts>
+	<package name="liu" extends="struts-default">
+		<global-results>
+			<result name="succeed">/common/succeed.jsp</result>
+			<result name="successAdd">/common/add_success.jsp</result>
+			<result name="successDel">/common/del_success.jsp</result>
+			<result name="successUpdate">/common/update_success.jsp</result>
+		</global-results>
+
+		<action name="upload" class="com.util.upload" method="upload">
+			<result name="success">/upload/upload_re.jsp</result>
+		</action>
+
+		<action name="login" class="adminAction" method="login">
+			<result name="success">/admin/index.jsp</result>
+		</action>
+		<action name="loginout" class="adminAction" method="loginout">
+			<result name="success">/login.jsp</result>
+		</action>
+		
+		<action name="adminupdatepwd" class="adminAction" method="adminupdatepwd">
+			<result name="success">/admin/adminupdatepwd.jsp</result>
+		</action>
+		
+		
+		<!-- 学生开始 -->
+		<action name="stumana" class="stuAction" method="mana">
+			<result name="success">/admin/stulist.jsp</result>
+		</action>
+		<action name="stucardmana" class="stuAction" method="stucardmana">
+			<result name="success">/admin/stucardlist.jsp</result>
+		</action>
+		<action name="stuadd" class="stuAction" method="add">
+		</action>
+		<action name="stumodifybefore" class="stuAction" method="modifybefore">
+			<result name="success">/admin/stumodify.jsp</result>
+		</action>
+		<action name="stumodify" class="stuAction" method="modify">
+		</action>
+		<action name="studel" class="stuAction" method="del">
+		</action>
+		<action name="stucx" class="stuAction" method="stucx">
+		</action>
+		<action name="stuqy" class="stuAction" method="stuqy">
+		</action>
+		<action name="stucz" class="stuAction" method="stucz">
+		</action>
+		<action name="czjlmana" class="stuAction" method="czjlmana">
+			<result name="success">/admin/czjllist.jsp</result>
+		</action>
+		<action name="sjjlmana" class="stuAction" method="sjjlmana">
+			<result name="success">/admin/sjjllist.jsp</result>
+		</action>
+		<action name="stucardpwdupdate" class="stuAction" method="stucardpwdupdate">
+			<result name="success">/admin/updatecardpwd.jsp</result>
+		</action>
+		<action name="sjbegin" class="stuAction" method="sjbegin">
+		</action>
+		<action name="sjend" class="stuAction" method="sjend">
+		</action>
+		<!-- 学生结束 -->
+		<!-- 收费标准开始 -->
+		<action name="sfbzmana" class="sfbzAction" method="mana">
+			<result name="success">/admin/sfbzlist.jsp</result>
+		</action>
+		<action name="sfbzadd" class="sfbzAction" method="add">
+		</action>
+		<action name="sfbzmodifybefore" class="sfbzAction" method="modifybefore">
+			<result name="success">/admin/sfbzmodify.jsp</result>
+		</action>
+		<action name="sfbzmodify" class="sfbzAction" method="modify">
+		</action>
+		<action name="sfbzdel" class="sfbzAction" method="del">
+		</action>
+		<!-- 收费标准结束 -->
+	</package>
+</struts>

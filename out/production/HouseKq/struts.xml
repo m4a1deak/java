@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC   
+     "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"   
+     "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+
+<struts>
+	<package name="liu" extends="struts-default">
+		<global-results>
+			<result name="succeed">/common/succeed.jsp</result>
+			<result name="successAdd">/common/add_success.jsp</result>
+			<result name="successDel">/common/del_success.jsp</result>
+			<result name="successUpdate">/common/update_success.jsp</result>
+		</global-results>
+
+		<action name="upload" class="com.util.upload" method="upload">
+			<result name="success">/upload/upload_re.jsp</result>
+		</action>
+
+		<action name="login" class="adminAction" method="login">
+			<result name="success">/admin/index.jsp</result>
+		</action>
+		<action name="loginout" class="adminAction" method="loginout">
+			<result name="success">/login.jsp</result>
+		</action>
+		
+		<action name="adminupdatepwd" class="adminAction" method="adminupdatepwd">
+			<result name="success">/admin/adminupdatepwd.jsp</result>
+		</action>
+		
+		
+		<!-- 学生开始 -->
+		<action name="stumana" class="stuAction" method="mana">
+			<result name="success">/admin/stulist.jsp</result>
+		</action>
+		<action name="stucardmana" class="stuAction" method="stucardmana">
+			<result name="success">/admin/stucardlist.jsp</result>
+		</action>
+		<action name="stuadd" class="stuAction" method="add">
+		</action>
+		<action name="stumodifybefore" class="stuAction" method="modifybefore">
+			<result name="success">/admin/stumodify.jsp</result>
+		</action>
+		<action name="stumodify" class="stuAction" method="modify">
+		</action>
+		<action name="studel" class="stuAction" method="del">
+		</action>
+		<action name="stucx" class="stuAction" method="stucx">
+		</action>
+		<action name="stuqy" class="stuAction" method="stuqy">
+		</action>
+		<action name="stucz" class="stuAction" method="stucz">
+		</action>
+		<action name="czjlmana" class="stuAction" method="czjlmana">
+			<result name="success">/admin/czjllist.jsp</result>
+		</action>
+		<action name="sjjlmana" class="stuAction" method="sjjlmana">
+			<result name="success">/admin/sjjllist.jsp</result>
+		</action>
+		<action name="stucardpwdupdate" class="stuAction" method="stucardpwdupdate">
+			<result name="success">/admin/updatecardpwd.jsp</result>
+		</action>
+		<action name="sjbegin" class="stuAction" method="sjbegin">
+		</action>
+		<action name="sjend" class="stuAction" method="sjend">
+		</action>
+		<!-- 学生结束 -->
+		
+		<action name="ksmana" class="ksAction" method="mana">
+			<result name="success">/admin/kslist.jsp</result>
+		</action>
+		
+		<action name="ksadd" class="ksAction" method="add">
+		</action>
+		<action name="ksmodifybefore" class="ksAction" method="modifybefore">
+			<result name="success">/admin/ksmodify.jsp</result>
+		</action>
+		<action name="ksmodify" class="ksAction" method="modify">
+		</action>
+		<action name="ksdel" class="ksAction" method="del">
+		</action>
+		
+		<action name="usersmana" class="usersAction" method="mana">
+			<result name="success">/admin/userslist.jsp</result>
+		</action>
+		
+		<action name="usersadd" class="usersAction" method="add">
+		</action>
+		<action name="usersaddbefore" class="usersAction" method="addbefore">
+			<result name="success">/admin/usersadd.jsp</result>
+		</action>
+		<action name="usersmodifybefore" class="usersAction" method="modifybefore">
+			<result name="success">/admin/usersmodify.jsp</result>
+		</action>
+		<action name="usersmodify" class="usersAction" method="modify">
+		</action>
+		<action name="usersdel" class="usersAction" method="del">
+		</action>
+		
+		
+		<action name="pbmana" class="pbAction" method="mana">
+			<result name="success">/admin/pblist.jsp</result>
+		</action>
+		
+		<action name="dkqmana" class="pbAction" method="dkqmana">
+			<result name="success">/admin/dkqlist.jsp</result>
+		</action>
+		<action name="dkqmana2" class="pbAction" method="dkqmana2">
+			<result name="success">/admin/dkqlist2.jsp</result>
+		</action>
+		
+		<action name="kqmana" class="pbAction" method="kqmana">
+			<result name="success">/admin/kqlist.jsp</result>
+		</action>
+		
+		<action name="kqmana2" class="pbAction" method="kqmana2">
+			<result name="success">/admin/kqlist2.jsp</result>
+		</action>
+		
+		<action name="pbadd" class="pbAction" method="add">
+		</action>
+		
+		<action name="kqadd" class="pbAction" method="kqadd">
+		</action>
+		<action name="kqadd2" class="pbAction" method="kqadd2">
+		</action>
+		
+		
+		
+		<action name="pbaddbefore" class="pbAction" method="addbefore">
+			<result name="success">/admin/pbadd.jsp</result>
+		</action>
+		<action name="pbmodifybefore" class="pbAction" method="modifybefore">
+			<result name="success">/admin/pbmodify.jsp</result>
+		</action>
+		<action name="pbmodify" class="pbAction" method="modify">
+		</action>
+		<action name="pbdel" class="pbAction" method="del">
+		</action>
+		
+	</package>
+</struts>
